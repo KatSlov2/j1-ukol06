@@ -17,11 +17,14 @@ public class SvatkySluzba {
     private final Path cestaKDatum = Path.of("data/svatky.json");
     private final SeznamSvatku seznamSvatku;
 
+
     public SvatkySluzba() throws IOException {
         // TODO načíst seznam svátků ze souboru svatky.json
 
+        SeznamSvatku seznamSvatku = objectMapper.readValue(cestaKDatum.toFile(), SeznamSvatku.class);
+
         // Následující řádek po vlastní implementaci smažete.
-        seznamSvatku = null;
+//        seznamSvatku = null;
     }
 
     public List<String> vyhledatSvatkyDnes() {
@@ -35,6 +38,7 @@ public class SvatkySluzba {
         // pomocí metody filter() vybrat jen ty, které odpovídají zadanému dni (porovnat MonthDay pomocí metodyequals())
         // pomocí metody map() získat z objektu jméno
         // pomocí toList() převést na List
+
 
         // Následující řádek po vlastní implementaci smažete.
         return List.of();
