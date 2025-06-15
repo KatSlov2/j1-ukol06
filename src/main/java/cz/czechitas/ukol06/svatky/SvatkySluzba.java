@@ -25,6 +25,9 @@ public class SvatkySluzba {
 
         // Následující řádek po vlastní implementaci smažete.
 //        seznamSvatku = null;
+
+    this.seznamSvatku = seznamSvatku;
+
     }
 
     public List<String> vyhledatSvatkyDnes() {
@@ -40,7 +43,7 @@ public class SvatkySluzba {
         // pomocí toList() převést na List
 
 
-        // Následující řádek po vlastní implementaci smažete.
+        // Následující řádek po vlastní implementaci smažete..filter( (svatek) -> svatek.den().getMonth().equals(mesic))
         return List.of();
     }
 }
